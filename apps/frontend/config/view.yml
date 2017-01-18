@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:         Consulta Corriente Web
+    #description:  symfony project
+    #keywords:     symfony, project
+    #language:     en
+    #robots:       index, follow
+
+  stylesheets:    [bootstrap-theme.css, bootstrap-theme.css.map, bootstrap-theme.min.css, bootstrap-theme.min.css.map, bootstrap.css, bootstrap.css.map, bootstrap.min.css, bootstrap.min.css.map]
+
+  javascripts:    [bootstrap.min.js, npm.js]
+
+  has_layout:     true
+  layout:         layout
