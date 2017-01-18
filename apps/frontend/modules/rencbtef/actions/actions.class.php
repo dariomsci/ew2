@@ -179,6 +179,9 @@ class rencbtefActions extends sfActions
 		foreach ($importes as $importe) {
 			$tot = $tot + $importe->getImporte();
 		}
+		
+		
+		
 		$this->total = number_format($tot, 2, ",", ".");
 	
 // 		print_r($this->total); //die;
