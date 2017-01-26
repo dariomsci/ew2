@@ -81,7 +81,6 @@
 			<?php endif; ?>
 				
 		<?php endforeach; ?>
-								
 		<a class="btn btn-default" role="button" href="<?php echo url_for('rencbtec/index') ?>?pag=<?php echo$pager->getNextPage() ?>"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a>
 		<a class="btn btn-default" role="button" href="<?php echo url_for('rencbtec/index') ?>?pag=<?php echo $pager->getLastPage() ?>"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></a>
 	<?php endif;?>

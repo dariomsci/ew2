@@ -22936,3 +22936,162 @@ Jan 18 16:14:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7
 Jan 18 16:14:51 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtec/index" 63.93 ms (1)
 Jan 18 16:14:51 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 28.49 ms (1)
 Jan 18 16:14:51 symfony [info] {sfWebResponse} Send content (76230 o)
+Jan 18 16:45:35 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /auth/logout with parameters array (  'module' => 'auth',  'action' => 'logout',)
+Jan 18 16:45:35 symfony [info] {myUser} Automatic user logout due to timeout
+Jan 18 16:45:35 symfony [info] {myUser} User is not authenticated
+Jan 18 16:45:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 18 16:45:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 18 16:45:35 symfony [info] {authActions} Call "authActions->executeLogout()"
+Jan 18 16:45:35 symfony [info] {myUser} User is not authenticated
+Jan 18 16:45:35 symfony [info] {sfFrontWebController} Redirect to "http://localhost/ew2/frontend_dev.php/"
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send header "Location: http://localhost/ew2/frontend_dev.php/"
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Configuration 0.94 ms (8)
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Factories 43.25 ms (1)
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Action "auth/logout" 0.68 ms (1)
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send content (109 o)
+Jan 18 16:45:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 18 16:45:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 18 16:45:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 18 16:45:35 symfony [info] {sfBasicSecurityFilter} Action "rencbtec/index" requires authentication, forwarding to "auth/login"
+Jan 18 16:45:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 18 16:45:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 18 16:45:35 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 18 16:45:35 symfony [info] {authActions} Change layout to "layout_login"
+Jan 18 16:45:35 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 18 16:45:35 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 18 16:45:35 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Configuration 1.04 ms (12)
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Factories 25.12 ms (1)
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.17 ms (1)
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 13.42 ms (1)
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send content (32133 o)
+Jan 18 16:45:35 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 18 16:45:35 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 18 16:45:35 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 18 16:45:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Configuration 0.69 ms (5)
+Jan 18 16:45:35 symfony [info] {sfWebDebugLogger} Factories 26.10 ms (1)
+Jan 24 18:54:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 24 18:54:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 24 18:54:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 24 18:54:07 symfony [info] {sfBasicSecurityFilter} Action "rencbtec/index" requires authentication, forwarding to "auth/login"
+Jan 24 18:54:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 24 18:54:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 24 18:54:07 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 24 18:54:07 symfony [info] {authActions} Change layout to "layout_login"
+Jan 24 18:54:07 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 24 18:54:07 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 24 18:54:07 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 24 18:54:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 24 18:54:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 24 18:54:07 symfony [info] {sfWebDebugLogger} Configuration 227.71 ms (12)
+Jan 24 18:54:07 symfony [info] {sfWebDebugLogger} Factories 57.16 ms (1)
+Jan 24 18:54:07 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.18 ms (1)
+Jan 24 18:54:07 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 14.28 ms (1)
+Jan 24 18:54:07 symfony [info] {sfWebResponse} Send content (31571 o)
+Jan 24 18:54:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 24 18:54:08 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 24 18:54:08 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 24 18:54:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 24 18:54:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 24 18:54:08 symfony [info] {sfWebDebugLogger} Configuration 0.52 ms (5)
+Jan 24 18:54:08 symfony [info] {sfWebDebugLogger} Factories 48.30 ms (1)
+Jan 25 16:06:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 25 16:06:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 25 16:06:16 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 25 16:06:16 symfony [info] {sfBasicSecurityFilter} Action "rencbtec/index" requires authentication, forwarding to "auth/login"
+Jan 25 16:06:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 25 16:06:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 25 16:06:16 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 25 16:06:16 symfony [info] {authActions} Change layout to "layout_login"
+Jan 25 16:06:16 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 25 16:06:16 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 25 16:06:16 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 25 16:06:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 25 16:06:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 25 16:06:16 symfony [info] {sfWebDebugLogger} Configuration 124.11 ms (12)
+Jan 25 16:06:16 symfony [info] {sfWebDebugLogger} Factories 53.40 ms (1)
+Jan 25 16:06:16 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.16 ms (1)
+Jan 25 16:06:16 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 10.80 ms (1)
+Jan 25 16:06:16 symfony [info] {sfWebResponse} Send content (31005 o)
+Jan 25 16:06:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 25 16:06:16 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 25 16:06:16 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 25 16:06:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 25 16:06:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 25 16:06:16 symfony [info] {sfWebDebugLogger} Configuration 0.48 ms (5)
+Jan 25 16:06:16 symfony [info] {sfWebDebugLogger} Factories 45.48 ms (1)
+Jan 25 16:06:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /auth/login with parameters array (  'module' => 'auth',  'action' => 'login',)
+Jan 25 16:06:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 25 16:06:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 25 16:06:20 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 25 16:06:20 symfony [info] {authActions} Change layout to "layout_login"
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.usuarios_id AS u__usuarios_id, u.webuser AS u__webuser, u.webpwd AS u__webpwd, u.codvend AS u__codvend, u.admin AS u__admin, u.nombre AS u__nombre, u.mail AS u__mail, u.codzona AS u__codzona FROM usuarios u WHERE (u.webuser = ? AND u.webpwd = ?) - (262, 262)
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.usuarios_id AS e__usuarios_id, e.entidad_id AS e__entidad_id, e.id AS e__id FROM entxuser e WHERE (e.usuarios_id = ?) - (262)
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 25 16:06:20 symfony [info] {myUser} User is authenticated
+Jan 25 16:06:20 symfony [info] {sfFrontWebController} Redirect to "http://localhost/ew2/frontend_dev.php/"
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send header "Location: http://localhost/ew2/frontend_dev.php/"
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Configuration 0.71 ms (8)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Factories 23.66 ms (1)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Action "auth/login" 50.51 ms (1)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send content (109 o)
+Jan 25 16:06:20 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 25 16:06:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 25 16:06:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 25 16:06:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 25 16:06:20 symfony [info] {rencbtecActions} Call "rencbtecActions->executeIndex()"
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) - (262)
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rencbtec r WHERE r.codigo = ? - (262)
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.descom DESC - (262)
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo AS e__codigo, e.codres AS e__codres, e.razsoc AS e__razsoc FROM entresum e WHERE (e.codigo = ?) ORDER BY e.razsoc DESC - (262)
+Jan 25 16:06:20 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtec/templates/indexSuccess.php"
+Jan 25 16:06:20 symfony [info] {sfPartialView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/_filtro.php"
+Jan 25 16:06:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC, r.hora ASC LIMIT 30 - (262)
+Jan 25 16:06:20 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 25 16:06:20 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Configuration 10.68 ms (10)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Factories 23.61 ms (1)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Action "rencbtec/index" 215.53 ms (1)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtec/index" 75.51 ms (1)
+Jan 25 16:06:20 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 27.91 ms (1)
+Jan 25 16:06:20 symfony [info] {sfWebResponse} Send content (75808 o)
+Jan 26 16:20:07 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 26 16:20:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 26 16:20:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 26 16:20:07 symfony [info] {sfBasicSecurityFilter} Action "rencbtec/index" requires authentication, forwarding to "auth/login"
+Jan 26 16:20:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 26 16:20:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 26 16:20:07 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 26 16:20:07 symfony [info] {authActions} Change layout to "layout_login"
+Jan 26 16:20:07 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 26 16:20:07 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 26 16:20:07 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 26 16:20:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 26 16:20:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 26 16:20:07 symfony [info] {sfWebDebugLogger} Configuration 2.88 ms (12)
+Jan 26 16:20:07 symfony [info] {sfWebDebugLogger} Factories 40.26 ms (1)
+Jan 26 16:20:07 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.19 ms (1)
+Jan 26 16:20:07 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 12.22 ms (1)
+Jan 26 16:20:07 symfony [info] {sfWebResponse} Send content (31413 o)
+Jan 26 16:20:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 26 16:20:08 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 26 16:20:08 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 26 16:20:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 26 16:20:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 26 16:20:08 symfony [info] {sfWebDebugLogger} Configuration 0.53 ms (5)
+Jan 26 16:20:08 symfony [info] {sfWebDebugLogger} Factories 35.04 ms (1)

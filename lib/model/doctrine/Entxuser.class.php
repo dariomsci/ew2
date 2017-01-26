@@ -12,4 +12,25 @@
  */
 class Entxuser extends BaseEntxuser
 {
+	public function getEnti()
+	{
+		$entxusr = Doctrine_Core::getTable('entxuser')
+		->createQuery('co')
+		->where('usuarios_id = ?', $this->getUsuariosId())
+		->fetchOne();
+	
+		if (!empty($entxusr)){
+			$entidad = Doctrine_Core::getTable('entidad')
+			->createQuery('co')
+			->where('codigo_id = ?', $entxusr->getEntidad_id())
+			->fetchOne();
+	
+			if (!empty($entidad)){
+				return $entidad->getRazsoc();
+			}else{
+				return ' - ';
+			}
+		}else {return ' - ';
+		}
+	}
 }
