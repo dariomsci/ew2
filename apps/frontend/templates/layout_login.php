@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/ew2/css/login.css" />
   </head>
   <body style="">
-
 	<?php echo $sf_content ?>
   </body>
 </html>

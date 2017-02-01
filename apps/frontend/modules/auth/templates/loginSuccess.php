@@ -31,8 +31,7 @@
 	  								</div>';
 	  						 }	?>
 					</div>
-					
-					
+					Adminitrador
 				</form>
 				<div class="form-links">
 					<a href="http://www.msci.com.ar" target="_blanc">www.msci.com.ar</a>

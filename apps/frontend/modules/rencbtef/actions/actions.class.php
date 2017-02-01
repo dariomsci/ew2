@@ -294,7 +294,7 @@ class rencbtefActions extends sfActions
 		$pdf->Cell(0, 0, 'RESUMEN FINANCIERO', 0, 1, 'L');
 		$pdf->SetFont('helvetica', 'N', 9);
 		$pdf->ln();
-		$pdf->Cell(0, 0, 'Entidad: '/*.$entidad->getRazsoc()*/, 0, 1, 'L');
+		$pdf->Cell(0, 0, 'Entidad: '.$entidad->getRazsoc(), 0, 1, 'L');
 		$pdf->SetLineWidth(0.208);
 		
 		// $pdf->setFillcolor(0);

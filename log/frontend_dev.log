@@ -23095,3 +23095,472 @@ Jan 26 16:20:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Jan 26 16:20:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Jan 26 16:20:08 symfony [info] {sfWebDebugLogger} Configuration 0.53 ms (5)
 Jan 26 16:20:08 symfony [info] {sfWebDebugLogger} Factories 35.04 ms (1)
+Jan 27 09:56:17 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /rencbtef with parameters array (  'module' => 'rencbtef',  'action' => 'index',)
+Jan 27 09:56:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 27 09:56:17 symfony [info] {sfBasicSecurityFilter} Action "rencbtef/index" requires authentication, forwarding to "auth/login"
+Jan 27 09:56:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 27 09:56:17 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 27 09:56:17 symfony [info] {authActions} Change layout to "layout_login"
+Jan 27 09:56:17 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 27 09:56:17 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 27 09:56:17 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 27 09:56:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 27 09:56:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:17 symfony [info] {sfWebDebugLogger} Configuration 255.50 ms (12)
+Jan 27 09:56:17 symfony [info] {sfWebDebugLogger} Factories 73.73 ms (1)
+Jan 27 09:56:17 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.17 ms (1)
+Jan 27 09:56:17 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 16.15 ms (1)
+Jan 27 09:56:17 symfony [info] {sfWebResponse} Send content (31122 o)
+Jan 27 09:56:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 27 09:56:18 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 27 09:56:18 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 27 09:56:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 27 09:56:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:18 symfony [info] {sfWebDebugLogger} Configuration 0.56 ms (5)
+Jan 27 09:56:18 symfony [info] {sfWebDebugLogger} Factories 25.15 ms (1)
+Jan 27 09:56:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /auth/login with parameters array (  'module' => 'auth',  'action' => 'login',)
+Jan 27 09:56:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 27 09:56:19 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 27 09:56:19 symfony [info] {authActions} Change layout to "layout_login"
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.usuarios_id AS u__usuarios_id, u.webuser AS u__webuser, u.webpwd AS u__webpwd, u.codvend AS u__codvend, u.admin AS u__admin, u.nombre AS u__nombre, u.mail AS u__mail, u.codzona AS u__codzona FROM usuarios u WHERE (u.webuser = ? AND u.webpwd = ?) - (262, 262)
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.usuarios_id AS e__usuarios_id, e.entidad_id AS e__entidad_id, e.id AS e__id FROM entxuser e WHERE (e.usuarios_id = ?) - (262)
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 27 09:56:19 symfony [info] {myUser} User is authenticated
+Jan 27 09:56:19 symfony [info] {sfFrontWebController} Redirect to "http://localhost/ew2/frontend_dev.php/"
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send header "Location: http://localhost/ew2/frontend_dev.php/"
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Configuration 0.79 ms (8)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Factories 24.62 ms (1)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Action "auth/login" 113.17 ms (1)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (4)
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send content (109 o)
+Jan 27 09:56:19 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 27 09:56:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 27 09:56:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 27 09:56:19 symfony [info] {rencbtecActions} Call "rencbtecActions->executeIndex()"
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) - (262)
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rencbtec r WHERE r.codigo = ? - (262)
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.descom DESC - (262)
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo AS e__codigo, e.codres AS e__codres, e.razsoc AS e__razsoc FROM entresum e WHERE (e.codigo = ?) ORDER BY e.razsoc DESC - (262)
+Jan 27 09:56:19 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtec/templates/indexSuccess.php"
+Jan 27 09:56:19 symfony [info] {sfPartialView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/_filtro.php"
+Jan 27 09:56:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC, r.hora ASC LIMIT 30 - (262)
+Jan 27 09:56:19 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 27 09:56:19 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Configuration 13.81 ms (10)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Factories 23.31 ms (1)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Action "rencbtec/index" 216.54 ms (1)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtec/index" 68.69 ms (1)
+Jan 27 09:56:19 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 27.76 ms (1)
+Jan 27 09:56:19 symfony [info] {sfWebResponse} Send content (75885 o)
+Jan 27 09:56:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 27 09:56:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 27 09:56:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 27 09:56:22 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 27 09:56:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 27 09:56:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (73)
+Jan 27 09:56:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (73)
+Jan 27 09:56:22 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 27 09:56:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 27 09:56:22 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 27 09:56:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:22 symfony [info] {sfWebDebugLogger} Configuration 11.14 ms (10)
+Jan 27 09:56:22 symfony [info] {sfWebDebugLogger} Factories 31.89 ms (1)
+Jan 27 09:56:22 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 160.36 ms (1)
+Jan 27 09:56:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 27 09:56:22 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.04 ms (1)
+Jan 27 09:56:22 symfony [info] {sfWebResponse} Send content (24540 o)
+Jan 27 09:56:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /auth/logout with parameters array (  'module' => 'auth',  'action' => 'logout',)
+Jan 27 09:56:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 27 09:56:31 symfony [info] {authActions} Call "authActions->executeLogout()"
+Jan 27 09:56:31 symfony [info] {myUser} User is not authenticated
+Jan 27 09:56:31 symfony [info] {sfFrontWebController} Redirect to "http://localhost/ew2/frontend_dev.php/"
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send header "Location: http://localhost/ew2/frontend_dev.php/"
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Configuration 0.71 ms (8)
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Factories 23.41 ms (1)
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Action "auth/logout" 0.70 ms (1)
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send content (109 o)
+Jan 27 09:56:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 27 09:56:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 27 09:56:31 symfony [info] {sfBasicSecurityFilter} Action "rencbtec/index" requires authentication, forwarding to "auth/login"
+Jan 27 09:56:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 27 09:56:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 27 09:56:31 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 27 09:56:31 symfony [info] {authActions} Change layout to "layout_login"
+Jan 27 09:56:31 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 27 09:56:31 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 27 09:56:31 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Configuration 1.06 ms (12)
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Factories 24.19 ms (1)
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.15 ms (1)
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 7.67 ms (1)
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send content (31836 o)
+Jan 27 09:56:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 27 09:56:31 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 27 09:56:31 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 27 09:56:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Configuration 0.60 ms (5)
+Jan 27 09:56:31 symfony [info] {sfWebDebugLogger} Factories 26.47 ms (1)
+Jan 31 11:49:38 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /rencbtef with parameters array (  'module' => 'rencbtef',  'action' => 'index',)
+Jan 31 11:49:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:49:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:49:38 symfony [info] {sfBasicSecurityFilter} Action "rencbtef/index" requires authentication, forwarding to "auth/login"
+Jan 31 11:49:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:49:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:49:38 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 31 11:49:38 symfony [info] {authActions} Change layout to "layout_login"
+Jan 31 11:49:38 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 31 11:49:39 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 31 11:49:39 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 31 11:49:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:49:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:49:39 symfony [info] {sfWebDebugLogger} Configuration 1.32 ms (12)
+Jan 31 11:49:39 symfony [info] {sfWebDebugLogger} Factories 58.69 ms (1)
+Jan 31 11:49:39 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.17 ms (1)
+Jan 31 11:49:39 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 18.47 ms (1)
+Jan 31 11:49:39 symfony [info] {sfWebResponse} Send content (31120 o)
+Jan 31 11:49:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 31 11:49:39 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 31 11:49:39 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 31 11:49:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 31 11:49:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:49:39 symfony [info] {sfWebDebugLogger} Configuration 0.58 ms (5)
+Jan 31 11:49:39 symfony [info] {sfWebDebugLogger} Factories 25.96 ms (1)
+Jan 31 11:50:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /auth/login with parameters array (  'module' => 'auth',  'action' => 'login',)
+Jan 31 11:50:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:50:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:50:08 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 31 11:50:08 symfony [info] {authActions} Change layout to "layout_login"
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.usuarios_id AS u__usuarios_id, u.webuser AS u__webuser, u.webpwd AS u__webpwd, u.codvend AS u__codvend, u.admin AS u__admin, u.nombre AS u__nombre, u.mail AS u__mail, u.codzona AS u__codzona FROM usuarios u WHERE (u.webuser = ? AND u.webpwd = ?) - (262, 262)
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.usuarios_id AS e__usuarios_id, e.entidad_id AS e__entidad_id, e.id AS e__id FROM entxuser e WHERE (e.usuarios_id = ?) - (262)
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:50:08 symfony [info] {myUser} User is authenticated
+Jan 31 11:50:08 symfony [info] {sfFrontWebController} Redirect to "http://localhost/ew2/frontend_dev.php/"
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send header "Location: http://localhost/ew2/frontend_dev.php/"
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Configuration 0.74 ms (8)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Factories 24.98 ms (1)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Action "auth/login" 153.28 ms (1)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send content (109 o)
+Jan 31 11:50:08 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 31 11:50:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:50:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:50:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:50:08 symfony [info] {rencbtecActions} Call "rencbtecActions->executeIndex()"
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) - (262)
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rencbtec r WHERE r.codigo = ? - (262)
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.descom DESC - (262)
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo AS e__codigo, e.codres AS e__codres, e.razsoc AS e__razsoc FROM entresum e WHERE (e.codigo = ?) ORDER BY e.razsoc DESC - (262)
+Jan 31 11:50:08 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtec/templates/indexSuccess.php"
+Jan 31 11:50:08 symfony [info] {sfPartialView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/_filtro.php"
+Jan 31 11:50:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC, r.hora ASC LIMIT 30 - (262)
+Jan 31 11:50:08 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 11:50:08 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Configuration 0.86 ms (9)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Factories 22.92 ms (1)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Action "rencbtec/index" 265.79 ms (1)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (7)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtec/index" 70.89 ms (1)
+Jan 31 11:50:08 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 28.59 ms (1)
+Jan 31 11:50:08 symfony [info] {sfWebResponse} Send content (75883 o)
+Jan 31 11:50:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:50:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:50:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:50:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:50:17 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:50:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:50:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (73)
+Jan 31 11:50:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (73)
+Jan 31 11:50:18 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:50:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:50:18 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:50:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:50:18 symfony [info] {sfWebDebugLogger} Configuration 1.15 ms (9)
+Jan 31 11:50:18 symfony [info] {sfWebDebugLogger} Factories 29.02 ms (1)
+Jan 31 11:50:18 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 165.18 ms (1)
+Jan 31 11:50:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:50:18 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:50:18 symfony [info] {sfWebResponse} Send content (24606 o)
+Jan 31 11:51:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:51:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:51:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:51:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:51:49 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:51:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:51:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (73)
+Jan 31 11:51:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (73)
+Jan 31 11:51:49 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:51:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:51:49 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:51:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:51:49 symfony [info] {sfWebDebugLogger} Configuration 0.91 ms (9)
+Jan 31 11:51:49 symfony [info] {sfWebDebugLogger} Factories 26.23 ms (1)
+Jan 31 11:51:49 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 141.65 ms (1)
+Jan 31 11:51:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:51:49 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:51:49 symfony [info] {sfWebResponse} Send content (24638 o)
+Jan 31 11:52:35 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 31 11:52:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:52:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:52:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:52:35 symfony [info] {rencbtecActions} Call "rencbtecActions->executeIndex()"
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) - (262)
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rencbtec r WHERE r.codigo = ? - (262)
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.descom DESC - (262)
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo AS e__codigo, e.codres AS e__codres, e.razsoc AS e__razsoc FROM entresum e WHERE (e.codigo = ?) ORDER BY e.razsoc DESC - (262)
+Jan 31 11:52:35 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtec/templates/indexSuccess.php"
+Jan 31 11:52:35 symfony [info] {sfPartialView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/_filtro.php"
+Jan 31 11:52:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC, r.hora ASC LIMIT 30 - (262)
+Jan 31 11:52:35 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 11:52:35 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 11:52:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:52:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:52:35 symfony [info] {sfWebDebugLogger} Configuration 0.84 ms (9)
+Jan 31 11:52:35 symfony [info] {sfWebDebugLogger} Factories 23.61 ms (1)
+Jan 31 11:52:35 symfony [info] {sfWebDebugLogger} Action "rencbtec/index" 203.31 ms (1)
+Jan 31 11:52:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7)
+Jan 31 11:52:35 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtec/index" 63.56 ms (1)
+Jan 31 11:52:35 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 28.03 ms (1)
+Jan 31 11:52:35 symfony [info] {sfWebResponse} Send content (75883 o)
+Jan 31 11:52:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:52:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:52:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:52:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:52:37 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:52:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:52:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (73)
+Jan 31 11:52:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (73)
+Jan 31 11:52:37 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:52:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:52:37 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:52:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:52:37 symfony [info] {sfWebDebugLogger} Configuration 0.96 ms (9)
+Jan 31 11:52:37 symfony [info] {sfWebDebugLogger} Factories 32.47 ms (1)
+Jan 31 11:52:37 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 156.90 ms (1)
+Jan 31 11:52:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:52:37 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:52:37 symfony [info] {sfWebResponse} Send content (24606 o)
+Jan 31 11:52:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:52:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:52:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:52:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:52:53 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:52:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (73)
+Jan 31 11:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (73)
+Jan 31 11:52:53 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:52:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:52:53 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:52:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:52:53 symfony [info] {sfWebDebugLogger} Configuration 1.05 ms (9)
+Jan 31 11:52:53 symfony [info] {sfWebDebugLogger} Factories 24.53 ms (1)
+Jan 31 11:52:53 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 134.31 ms (1)
+Jan 31 11:52:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:52:53 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:52:53 symfony [info] {sfWebResponse} Send content (24638 o)
+Jan 31 11:54:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:54:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:54:13 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:54:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:54:13 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:54:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:54:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (73)
+Jan 31 11:54:13 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (73)
+Jan 31 11:54:13 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:54:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:54:13 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:54:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:54:13 symfony [info] {sfWebDebugLogger} Configuration 0.89 ms (9)
+Jan 31 11:54:13 symfony [info] {sfWebDebugLogger} Factories 27.46 ms (1)
+Jan 31 11:54:13 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 141.54 ms (1)
+Jan 31 11:54:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:54:13 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:54:13 symfony [info] {sfWebResponse} Send content (24638 o)
+Jan 31 11:54:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:54:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:54:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:54:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:54:25 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:54:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:54:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (262)
+Jan 31 11:54:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:54:25 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:54:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:54:25 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:54:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:54:25 symfony [info] {sfWebDebugLogger} Configuration 0.86 ms (9)
+Jan 31 11:54:25 symfony [info] {sfWebDebugLogger} Factories 23.68 ms (1)
+Jan 31 11:54:25 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 833.90 ms (1)
+Jan 31 11:54:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:54:25 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:54:25 symfony [info] {sfWebResponse} Send content (24640 o)
+Jan 31 11:54:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtec/rencbtecPDF with parameters array (  'module' => 'rencbtec',  'action' => 'rencbtecPDF',)
+Jan 31 11:54:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:54:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:54:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:54:59 symfony [info] {rencbtecActions} Call "rencbtecActions->executeRencbtecPDF()"
+Jan 31 11:54:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:54:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (262)
+Jan 31 11:54:59 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:55:00 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:55:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:55:00 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:55:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:55:00 symfony [info] {sfWebDebugLogger} Configuration 0.92 ms (9)
+Jan 31 11:55:00 symfony [info] {sfWebDebugLogger} Factories 27.46 ms (1)
+Jan 31 11:55:00 symfony [info] {sfWebDebugLogger} Action "rencbtec/rencbtecPDF" 845.80 ms (1)
+Jan 31 11:55:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:55:00 symfony [info] {sfWebDebugLogger} View "None" for "rencbtec/rencbtecPDF" 0.01 ms (1)
+Jan 31 11:55:00 symfony [info] {sfWebResponse} Send content (24641 o)
+Jan 31 11:56:05 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /rencbtef with parameters array (  'module' => 'rencbtef',  'action' => 'index',)
+Jan 31 11:56:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:56:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:56:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:56:05 symfony [info] {rencbtefActions} Call "rencbtefActions->executeIndex()"
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) - (262)
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rencbtef r WHERE r.codigo = ? - (262)
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.descom DESC - (262)
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo AS e__codigo, e.codres AS e__codres, e.razsoc AS e__razsoc FROM entresum e WHERE (e.codigo = ?) ORDER BY e.razsoc DESC - (262)
+Jan 31 11:56:05 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/indexSuccess.php"
+Jan 31 11:56:05 symfony [info] {sfPartialView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/_filtro.php"
+Jan 31 11:56:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.fecha ASC, r.hora ASC LIMIT 30 - (262)
+Jan 31 11:56:05 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 11:56:05 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 11:56:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:56:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:56:05 symfony [info] {sfWebDebugLogger} Configuration 16.30 ms (10)
+Jan 31 11:56:05 symfony [info] {sfWebDebugLogger} Factories 24.72 ms (1)
+Jan 31 11:56:05 symfony [info] {sfWebDebugLogger} Action "rencbtef/index" 194.81 ms (1)
+Jan 31 11:56:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7)
+Jan 31 11:56:05 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtef/index" 82.85 ms (1)
+Jan 31 11:56:05 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 28.26 ms (1)
+Jan 31 11:56:05 symfony [info] {sfWebResponse} Send content (75872 o)
+Jan 31 11:56:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtef/rencbtefPDF with parameters array (  'module' => 'rencbtef',  'action' => 'rencbtefPDF',)
+Jan 31 11:56:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:56:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:56:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:56:09 symfony [info] {rencbtefActions} Call "rencbtefActions->executeRencbtefPDF()"
+Jan 31 11:56:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:56:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (262)
+Jan 31 11:56:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:56:10 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:56:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:56:10 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:56:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:56:10 symfony [info] {sfWebDebugLogger} Configuration 1.15 ms (9)
+Jan 31 11:56:10 symfony [info] {sfWebDebugLogger} Factories 32.50 ms (1)
+Jan 31 11:56:10 symfony [info] {sfWebDebugLogger} Action "rencbtef/rencbtefPDF" 884.01 ms (1)
+Jan 31 11:56:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:56:10 symfony [info] {sfWebDebugLogger} View "None" for "rencbtef/rencbtefPDF" 0.01 ms (1)
+Jan 31 11:56:10 symfony [info] {sfWebResponse} Send content (24549 o)
+Jan 31 11:56:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /rencbtef/rencbtefPDF with parameters array (  'module' => 'rencbtef',  'action' => 'rencbtefPDF',)
+Jan 31 11:56:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 11:56:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 11:56:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 11:56:50 symfony [info] {rencbtefActions} Call "rencbtefActions->executeRencbtefPDF()"
+Jan 31 11:56:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 11:56:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.fecha ASC - (262)
+Jan 31 11:56:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (262)
+Jan 31 11:56:51 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:56:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 11:56:51 symfony [warning] {sfWebDebugLogger}  Warning at /home/master/sfProjects/lib/vendor/symfony-1.4/lib/response/sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at /home/master/sfProjects/eternumwebV2/plugins/sfTCPDFPlugin/lib/tcpdf/tcpdf.php:8657))
+Jan 31 11:56:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 11:56:51 symfony [info] {sfWebDebugLogger} Configuration 0.87 ms (9)
+Jan 31 11:56:51 symfony [info] {sfWebDebugLogger} Factories 24.88 ms (1)
+Jan 31 11:56:51 symfony [info] {sfWebDebugLogger} Action "rencbtef/rencbtefPDF" 856.77 ms (1)
+Jan 31 11:56:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Jan 31 11:56:51 symfony [info] {sfWebDebugLogger} View "None" for "rencbtef/rencbtefPDF" 0.01 ms (1)
+Jan 31 11:56:51 symfony [info] {sfWebResponse} Send content (24649 o)
+Jan 31 12:23:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 31 12:23:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 12:23:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 12:23:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 12:23:29 symfony [info] {rencbtecActions} Call "rencbtecActions->executeIndex()"
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) - (28)
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM rencbtec r WHERE r.codigo = ? - (28)
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo_id AS e__codigo_id, e.razsoc AS e__razsoc, e.cuit AS e__cuit, e.codvend AS e__codvend, e.direccion AS e__direccion, e.mail AS e__mail, e.telefono AS e__telefono, e.esprov AS e__esprov, e.esclie AS e__esclie FROM entidad e WHERE (e.codigo_id = ?) - (28)
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtef r WHERE (r.codigo = ?) ORDER BY r.descom DESC - (28)
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.codigo AS e__codigo, e.codres AS e__codres, e.razsoc AS e__razsoc FROM entresum e WHERE (e.codigo = ?) ORDER BY e.razsoc DESC - (28)
+Jan 31 12:23:29 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtec/templates/indexSuccess.php"
+Jan 31 12:23:29 symfony [info] {sfPartialView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/rencbtef/templates/_filtro.php"
+Jan 31 12:23:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT r.id AS r__id, r.codemp AS r__codemp, r.codcom AS r__codcom, r.codtal AS r__codtal, r.numero AS r__numero, r.nroren AS r__nroren, r.codigo AS r__codigo, r.codres AS r__codres, r.fecha AS r__fecha, r.hora AS r__hora, r.descom AS r__descom, r.letra AS r__letra, r.torig AS r__torig, r.norig AS r__norig, r.forig AS r__forig, r.importe AS r__importe, r.detalle AS r__detalle FROM rencbtec r WHERE (r.codigo = ?) ORDER BY r.fecha ASC, r.hora ASC LIMIT 30 - (28)
+Jan 31 12:23:29 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 12:23:29 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout.php"
+Jan 31 12:23:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 12:23:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 12:23:29 symfony [info] {sfWebDebugLogger} Configuration 0.87 ms (9)
+Jan 31 12:23:29 symfony [info] {sfWebDebugLogger} Factories 27.82 ms (1)
+Jan 31 12:23:29 symfony [info] {sfWebDebugLogger} Action "rencbtec/index" 101.14 ms (1)
+Jan 31 12:23:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (7)
+Jan 31 12:23:29 symfony [info] {sfWebDebugLogger} View "Success" for "rencbtec/index" 21.77 ms (1)
+Jan 31 12:23:29 symfony [info] {sfWebDebugLogger} Partial "rencbtef/_filtro" 1.39 ms (1)
+Jan 31 12:23:29 symfony [info] {sfWebResponse} Send content (52893 o)
+Jan 31 12:23:34 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /auth/logout with parameters array (  'module' => 'auth',  'action' => 'logout',)
+Jan 31 12:23:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 12:23:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 12:23:34 symfony [info] {authActions} Call "authActions->executeLogout()"
+Jan 31 12:23:34 symfony [info] {myUser} User is not authenticated
+Jan 31 12:23:34 symfony [info] {sfFrontWebController} Redirect to "http://localhost/ew2/frontend_dev.php/"
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send header "Location: http://localhost/ew2/frontend_dev.php/"
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Configuration 0.75 ms (8)
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Factories 25.35 ms (1)
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Action "auth/logout" 2.03 ms (1)
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send content (109 o)
+Jan 31 12:23:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'rencbtec',  'action' => 'index',)
+Jan 31 12:23:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 12:23:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jan 31 12:23:34 symfony [info] {sfBasicSecurityFilter} Action "rencbtec/index" requires authentication, forwarding to "auth/login"
+Jan 31 12:23:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 31 12:23:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 31 12:23:34 symfony [info] {authActions} Call "authActions->executeLogin()"
+Jan 31 12:23:34 symfony [info] {authActions} Change layout to "layout_login"
+Jan 31 12:23:34 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/modules/auth/templates/loginSuccess.php"
+Jan 31 12:23:34 symfony [info] {sfPHPView} Decorate content with "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 31 12:23:34 symfony [info] {sfPHPView} Render "/home/master/sfProjects/eternumwebV2/apps/frontend/templates/layout_login.php"
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Configuration 1.09 ms (12)
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Factories 25.19 ms (1)
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Action "auth/login" 0.16 ms (1)
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} View "Success" for "auth/login" 10.42 ms (1)
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send content (31695 o)
+Jan 31 12:23:34 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /images/logos/logo_emp.png with parameters array (  'module' => 'images',  'action' => 'logos',  'logo_emp.png' => true,)
+Jan 31 12:23:34 symfony [info] {sfFrontWebController} Action "images/logos" does not exist
+Jan 31 12:23:34 symfony [err] {sfError404Exception} Action "images/logos" does not exist.
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jan 31 12:23:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Configuration 0.63 ms (5)
+Jan 31 12:23:34 symfony [info] {sfWebDebugLogger} Factories 26.31 ms (1)

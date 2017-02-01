@@ -8,7 +8,7 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
   </head>
-  <body style="">
+  <body style="padding: 5px;">
 	<div class="row" style="width: 100%;">
 	  <div class="col-xs-12 col-md-8">
 		<div class="container-fluid" style="padding-left: 0px !important;">

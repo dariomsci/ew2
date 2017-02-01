@@ -283,7 +283,6 @@ class rencbtecActions extends sfActions
 	{
 		$entidad_id = $this->getUser()->getAttribute('entidad_id');
 		
-		$entidad_id = 73;
 		$q = Doctrine_Query::create()->from('rencbtec a')->where('codigo =? ', $entidad_id);
 		$q->addOrderBy('fecha ASC');
 		$pp = $q->execute();
@@ -303,7 +302,7 @@ class rencbtecActions extends sfActions
 		$pdf->Cell(0, 0, 'RESUMEN CONTABLE', 0, 1, 'L');
 		$pdf->SetFont('helvetica', 'N', 9);
 		$pdf->ln();
-		$pdf->Cell(0, 0, 'Entidad: '/*.$entidad->getRazsoc()*/, 0, 1, 'L');
+		$pdf->Cell(0, 0, 'Entidad: '.$entidad->getRazsoc(), 0, 1, 'L');
 		$pdf->SetLineWidth(0.208);
 		
 		// $pdf->setFillcolor(0);
