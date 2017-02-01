@@ -1,0 +1,313 @@
+<?php
+//ADMIN
+/**
+ * users actions.
+ *
+ * @package    ctacteweb
+ * @subpackage users
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
+ */
+class usersActions extends sfActions
+{
+  public function executeIndex(sfWebRequest $request)
+  {
+  	
+  	$this->getUser()->getAttributeHolder()->remove('usuarios_id');
+  	
+  	$entidad_id = $this->getUser()->getAttribute('entidad_id');
+  	
+  	
+  	$id_admin = $this->getUser()->getAttribute('id_admin');
+  	
+  	$entidad_razsoc = $this->getUser()->getAttribute('entidad_razsoc');
+  	
+  	$this->entidad = Doctrine_Core::getTable('entidad')
+	  	->createQuery('a')
+  		->where('codigo_id =? ', $id_admin)
+  		->fetchOne();
+  	
+  	$this->pager = new sfDoctrinePager(
+  			'usuarios', 15 //cantidad de reg x pag.
+  	);
+  	
+  	//lo preparo para poder filtrar
+  	$this->q = Doctrine_Query::create()
+  	->from('usuarios a');
+  	
+  	$this->pager->setQuery($this->q);
+  	$this->pager->setPage($request->getParameter('pag', 1));
+  	$this->pager->init();
+  	
+  	
+//     $this->usuarioss = Doctrine_Core::getTable('usuarios')
+//       	->createQuery('a')
+//       	->execute();
+  }
+
+  public function executeNew(sfWebRequest $request)
+  {
+   	$this->proximo();
+//   	print_r($this->proximo()); die; 	
+  	
+  	$entidad_id = $this->getUser()->getAttribute('entidad_id');
+  	$entidad_razsoc = $this->getUser()->getAttribute('entidad_razsoc');
+  	
+  	$this->entidad = Doctrine_Core::getTable('entidad')
+  	->createQuery('a')
+  	->where('codigo_id =? ', $entidad_id)
+  	->fetchOne();
+  	
+    $this->form = new usuariosForm();
+  }
+
+  public function executeCreate(sfWebRequest $request)
+  {
+  	$this->proximo();
+  	
+  	$entidad_id = $this->getUser()->getAttribute('entidad_id');
+  	$entidad_razsoc = $this->getUser()->getAttribute('entidad_razsoc');
+  	
+  	$this->entidad = Doctrine_Core::getTable('entidad')
+  	->createQuery('a')
+  	->where('codigo_id =? ', $entidad_id)
+  	->fetchOne();  	
+  	
+    $this->forward404Unless($request->isMethod(sfRequest::POST));
+
+    $this->form = new usuariosForm();
+
+    $this->processForm($request, $this->form);
+
+    $this->setTemplate('new');
+  }
+
+  public function executeEdit(sfWebRequest $request)
+  {
+  	$entidad_id = $this->getUser()->getAttribute('entidad_id');
+  	$entidad_razsoc = $this->getUser()->getAttribute('entidad_razsoc');
+  	
+  	$this->entidad = Doctrine_Core::getTable('entidad')
+  	->createQuery('a')
+  	->where('codigo_id =? ', $entidad_id)
+  	->fetchOne();
+  	
+    $this->forward404Unless($usuarios = Doctrine_Core::getTable('usuarios')->find(array($request->getParameter('usuarios_id'))), sprintf('Object usuarios does not exist (%s).', $request->getParameter('usuarios_id')));
+    $this->form = new usuariosForm($usuarios);
+  }
+
+  public function executeUpdate(sfWebRequest $request)
+  {
+  	$entidad_id = $this->getUser()->getAttribute('entidad_id');
+  	$entidad_razsoc = $this->getUser()->getAttribute('entidad_razsoc');
+  	
+  	$this->entidad = Doctrine_Core::getTable('entidad')
+  	->createQuery('a')
+  	->where('codigo_id =? ', $entidad_id)
+  	->fetchOne();
+  	
+  	$this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
+	$this->forward404Unless($usuarios = Doctrine_Core::getTable('usuarios')->find(array($request->getParameter('usuarios_id'))), sprintf('Object usuarios does not exist (%s).', $request->getParameter('usuarios_id')));
+	$this->form = new usuariosForm($usuarios);
+	
+	$this->processForm($request, $this->form);
+	
+	$this->setTemplate('edit');
+	
+  }
+
+  public function executeDelete(sfWebRequest $request)
+  {
+    $request->checkCSRFProtection();
+
+    //primero borro la tabla entxuser
+    $entxuser = Doctrine_Query::create()
+    ->delete('entxuser e')
+    ->where('e.usuarios_id = ?', $request->getParameter('usuarios_id'));
+    $entxuser->execute();
+
+    //segundo borro la tabla usuario
+    $this->forward404Unless($usuarios = Doctrine_Core::getTable('usuarios')->
+    		find(array($request->getParameter('usuarios_id'))), 
+    		sprintf('Object usuarios does not exist (%s).', $request->getParameter('usuarios_id')));
+    $usuarios->delete();
+
+    $this->redirect('users/index');
+  }
+
+  protected function processForm(sfWebRequest $request, sfForm $form)
+  {
+    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    if ($form->isValid())
+    {
+      $usuarios = $form->save();
+
+      //entxusu
+      $entxusu=$form['entxusu']->getValue();    
+
+      if($form->isNew())
+      {
+      	$entidad_usuario = new entxuser;
+      	$entidad_usuario->usuarios_id = $usuarios->getWebuser();
+      	$entidad_usuario->entidad_id = $entxusu;
+      
+      	$entidad_usuario->save();
+      }else {
+      	$q = Doctrine_Query::create()
+	      	->update('entxuser e')
+	      	->set('e.usuarios_id', '?', $usuarios->getWebuser())
+	      	->set('e.entidad_id', '?', $entxusu)
+	      	->where('e.usuarios_id = ?', $usuarios->getWebuser());
+      	$q->execute();
+      	
+      }
+      
+//    $this->redirect('users/edit?usuarios_id='.$usuarios->getUsuariosId());
+      $this->redirect('users/index');
+      
+    }
+  }
+
+  public function proximo()
+  {
+  	$q = Doctrine_Core::getTable('usuarios')
+  	->createQuery('a')
+  	->select('MAX(usuarios_id) as Max');
+  	$result = $q->fetchOne();
+  	
+  	$this->proximo = $result->Max + 1;
+  }  
+  
+  public function executeBuscar(sfWebRequest $request)
+  {
+  	//lo preparo para poder filtrar
+  	$usuarios = Doctrine_Query::create()
+  	->from('entidad')
+  	->where('razsoc like ?', '%'.$request->getParameter('term').'%')
+   	->execute();
+  	
+//   	print_r($usuarios); die;
+  
+   	
+  	foreach($usuarios as $usuario)
+	  	{
+	  		$result[]= '{ "id": "'.$usuario->getCodigo_id(). '", "label": "'.$usuario->getRazsoc().'", "value": "'.$usuario->getRazsoc().'" }';
+	  	}
+	  	
+	  	$ret = '['.implode(',', $result ).']';
+  	
+
+  	return $this->renderText($ret);
+  
+  	return sfView::NONE;
+  }  
+  
+  public function executeFiltro(sfWebRequest $request)
+  {
+  	$entidad_id = $this->getUser()->getAttribute('entidad_id');
+  	$entidad_razsoc = $this->getUser()->getAttribute('entidad_razsoc');
+  	
+  	$id_usuario = $request->getParameter('usuario_id');
+  	
+//   	print_r($id_usuario); die;
+ 	
+  	if (empty($id_usuario ))
+  	{
+  		$this->entidad = Doctrine_Core::getTable('entidad')
+  		->createQuery('a')
+  		->where('codigo_id =? ', $entidad_id)
+  		->fetchOne();
+  	
+  		$this->pager = new sfDoctrinePager(
+  				'usuarios', 20 //cantidad de reg x pag.
+  		);
+  	
+  		//lo preparo para poder filtrar
+  		$this->q = Doctrine_Query::create()
+  		->from('usuarios a');
+  	
+  		$this->pager->setQuery($this->q);
+  		$this->pager->setPage($request->getParameter('pag', 1));
+  		$this->pager->init();
+  	
+  	}else{
+  		
+  		
+//   		echo 'poi'; die;
+  		
+  		$this->entidad = Doctrine_Core::getTable('entidad')
+	  		->createQuery('a')
+	  		->where('codigo_id =? ', $entidad_id)
+	  		->fetchOne();
+  		
+  		$this->pager = new sfDoctrinePager(
+  				'usuarios', 20 //cantidad de reg x pag.
+  		);
+  		
+  		//lo preparo para poder filtrar
+  		$this->q = Doctrine_Query::create()
+  		->from('entxuser a')
+  		->where('entidad_id =? ', $id_usuario);
+  		
+  		$this->pager->setQuery($this->q);
+  		$this->pager->setPage($request->getParameter('pag', 1));
+  		$this->pager->init();
+  	 		
+  	}	
+  }
+
+  public function executeUrlrencbtef(sfWebRequest $request)
+  {
+  	$id_usuario = $request->getParameter('usuarios_id');
+  	
+  	$q = Doctrine_Query::create()
+  	->from('entxuser')
+  	->where('usuarios_id = ?', $id_usuario);
+  	$entidadxusuario = $q->fetchOne();
+  	
+  	$id_entidad = $entidadxusuario->getEntidad_id();
+//   	die($id_entidad);
+  	$this->getUser()->setAttribute('entidad_id', $id_entidad);
+  	//$id = $this->getUser()->getAttribute('entidad_id');
+  	
+ 	$this->redirect('/eternumweb/rencbtef/index');
+  	return sfView::NONE;
+  }
+
+  public function executeUrlrencbtec(sfWebRequest $request)
+  {
+  	$id_usuario = $request->getParameter('usuarios_id');
+  	
+  	$q = Doctrine_Query::create()
+  	->from('entxuser')
+  	->where('usuarios_id = ?', $id_usuario);
+  	$entidadxusuario = $q->fetchOne();
+  	
+  	$id_entidad = $entidadxusuario->getEntidad_id();
+  	//   	die($id_entidad);
+  	$this->getUser()->setAttribute('entidad_id', $id_entidad);
+  	//$id = $this->getUser()->getAttribute('entidad_id');
+  	
+  	$this->redirect('/eternumweb/rencbtec/index');
+  	return sfView::NONE;
+  }
+
+  public function executeUrlfichares(sfWebRequest $request)
+  {
+  	$id_usuario = $request->getParameter('usuarios_id');
+  	
+  	$q = Doctrine_Query::create()
+  	->from('entxuser')
+  	->where('usuarios_id = ?', $id_usuario);
+  	$entidadxusuario = $q->fetchOne();
+  	
+  	$id_entidad = $entidadxusuario->getEntidad_id();
+  	//   	die($id_entidad);
+  	$this->getUser()->setAttribute('entidad_id', $id_entidad);
+  	//$id = $this->getUser()->getAttribute('entidad_id');
+  	
+  	$this->redirect('/eternumweb/fichares/index');
+  	return sfView::NONE;
+  }
+
+}

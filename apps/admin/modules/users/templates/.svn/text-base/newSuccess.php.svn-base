@@ -1,0 +1,13 @@
+<div style="width: 100%; text-align: left; height: 60px; vertical-align: middle; border: 1px solid #616364; -moz-border-radius: 3px; -webkit-border-radius: 3px; ">
+	<div class="toolbar2" style="width: 45%; text-align: left; height: 50px; vertical-align: middle; padding-left: 5px;">
+		<img style="position: absolute;" src="/eternumweb/images/iconos/usuario.png"/>
+		<h1 style="padding-left: 80px;">Nuevo Usuario</h1>
+	</div>
+	<div class="toolbar" id="toolbar" style="text-align: right; position: relative; width: 50%; height: 50px; vertical-align: top;">
+		<h3><?php echo $entidad->getRazsoc() ?></h3>
+	</div>
+</div>
+
+<div style="padding-top: 2%;">
+	<?php include_partial('form', array('form' => $form, 'proximo' => $proximo)) ?>
+</div>

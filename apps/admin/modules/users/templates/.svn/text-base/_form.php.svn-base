@@ -1,0 +1,67 @@
+<?php use_stylesheets_for_form($form) ?>
+<?php use_javascripts_for_form($form) ?>
+
+
+<table style="border: none;">
+  <tr>
+    <td align="center">
+		<div style="width: 50%; border: none; padding-top: 5%; ">
+			<div style="border:1px solid #d1c4b1; padding: 5px; ">
+				<form action="<?php echo url_for('users/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?usuarios_id='.$form->getObject()->getUsuariosId(): '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+				<?php if (!$form->getObject()->isNew()): ?>
+				<input class="botones" type="hidden" name="sf_method" value="put" />
+				<?php endif; ?>
+				  <table class="carga" style="padding: 15px; border: none;">
+				    <tfoot>
+				      <tr>
+				        <td colspan="2">
+				          <?php echo $form->renderHiddenFields(false) ?>
+				          &nbsp;<a class="botones" href="<?php echo url_for('users/index') ?>">Volver</a>
+				          <input class="botones" type="submit" value="Guardar" />
+				        </td>
+				        <td style="text-align: right;">
+				          <?php if (!$form->getObject()->isNew()): ?>
+				            &nbsp;<?php echo link_to('Eliminar', 'users/delete?usuarios_id='.$form->getObject()->getUsuariosId(), array('method' => 'delete', 'confirm' => 'Seguro desea Borrar al usuario: ' .$form->getObject()->getUsuariosId() .'?', 'class'=>'botones', 'style'=>'color:#21a8da')) ?>
+				          <?php endif; ?>
+				        
+				        </td>
+				      </tr>
+				    </tfoot>
+				    <tbody>
+				      <?php echo $form->renderGlobalErrors() ?>
+				      <tr>
+				        <th>Usuario</th>
+				        <td>
+				          <?php echo $form['webuser']->renderError() ?>
+				          <?php if ($form->getObject()->isNew()){
+// 				          		echo $form['webuser'];
+				          	echo $proximo;} 
+				          	else {
+				          		echo $form['webuser']->render(array('readonly'=>'readonly'));} ?>
+				        </td>
+				      </tr>
+				      <tr>
+				        <th>Contraseña</th>
+				        <td>
+				          <?php echo $form['webpwd']?>
+				        </td>
+				        <td align="left">
+				          <?php echo $form['webpwd']->renderError() ?>				          
+				        </td>
+				      </tr>
+				      <tr>
+				        <th>Entidad</th>
+				      	<td colspan="2" >				      	
+				      		<?php echo $form['entxusu']->renderError() ?> 
+							<?php echo $form['entxusu']?>
+				      	</td>
+				      </tr>
+				    </tbody>
+				  </table>
+				</form>
+			</div>
+		</div>
+    </td>
+  </tr>
+</table>
+		

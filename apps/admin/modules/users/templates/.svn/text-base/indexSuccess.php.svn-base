@@ -1,0 +1,112 @@
+<script type="text/javascript">
+$(document).ready(function()
+	{
+
+	$(function() {$("#tags").focus();	});
+
+	$(function() {
+		$( "#tags").autocomplete({
+			source: "<?php echo url_for('users/buscar')?>",
+			minLength: 2,
+			select: function( event, ui ) {
+				vhref = '<?php echo url_for('users/filtro?usuario_id=')?>'+ ui.item.id;
+
+				window.location.href = vhref  ; 	
+			}
+		});
+	});
+	});
+</script>
+
+<div style="width: 100%; text-align: left; height: 60px; vertical-align: middle; border: 1px solid #616364; -moz-border-radius: 3px; -webkit-border-radius: 3px; ">
+	<div class="toolbar2" style="width: 45%; text-align: left; height: 50px; vertical-align: middle; padding-left: 5px;">
+		<img style="position: absolute;" src="/eternumweb/images/iconos/usuario.png"/>
+		<h1 style="padding-left: 80px;">Lista de Usuarios</h1>
+	</div>
+	<div class="toolbar" id="toolbar" style="text-align: right; position: relative; width: 50%; height: 50px; vertical-align: top;">
+		<h3><?php // echo $entidad->getRazsoc() ?>
+			<?php echo !empty($entidad)? $entidad->getRazsoc(): ''?>
+		</h3>
+		
+	</div>
+</div>
+
+<div style="padding-top: 2%;">
+
+<a class="chota" href="<?php echo url_for('users/new') ?>">Nuevo</a>
+
+<div style="text-align: center; padding: 1%;">
+	<label for="tags" style="color: #0b55c4; font-weight: bold; font-size: 1.2em;">Buscar</label>
+	<input id="tags" style="font-size: 1.2em; width: 385px;">
+</div>
+
+<table style="border: none;">
+  <tr>
+    <td align="center">
+	<table style="width: 60%;" class="list_tabla">
+	  <thead>
+	    <tr>
+	      <th></th>
+	      <th>Entidad</th>
+	      <th></th>
+	      <th></th>
+	      <th></th>
+	      <th style="text-align: center;">Usuario</th>
+	      <th style="text-align: center;">Contraseña</th>
+	    </tr>
+	  </thead>
+	  <tbody class="movi" >
+	    <?php $i=0; foreach ($pager->getResults() as $usuarios): ?>
+	    <tr <?php echo $i%2?' class="par"':' class="impar"'?>>
+	      <td style="width: 25px;">
+	      	<a class="icon-48-search" href="<?php echo url_for('users/edit?usuarios_id='.$usuarios->getUsuariosId()) ?>">
+	      		<?php // echo $usuarios->getUsuariosId() ?>
+	      		<img title="Editar" alt="Ver" src="/eternumweb/images/iconos/search.png">
+	      	</a>
+	      </td>
+	      <td style="text-align: left;"><?php echo $usuarios->getEnti() ?></td>
+	      <td style="width: 40px; text-align: center;">
+	      <!-- <a href="<?php //echo url_for('rencbtef/index?usuarios_id='.$usuarios->getUsuariosId()) ?>"> -->
+	      	<a href="<?php echo url_for('users/urlrencbtef?usuarios_id='.$usuarios->getUsuariosId()) ?>">
+	      		<img title="Ver Resumen Financiero de <?php echo $usuarios->getEnti()?>" alt="Ver Resumen Financiero" src="/eternumweb/images/iconos/dinero_blue.png">
+	      	</a>
+	      </td>
+	      <td style="width: 40px; text-align: center;">
+	      	<a href="<?php echo url_for('users/urlrencbtec?usuarios_id='.$usuarios->getUsuariosId()) ?>">
+	      		<img title="Ver Resumen Contable de <?php echo $usuarios->getEnti()?>" alt="Ver Resumen Contable" src="/eternumweb/images/iconos/dinero_red.png">
+	      	</a>
+	      </td>	      	
+	      <td style="width: 40px; text-align: center;">
+	      	<a href="<?php echo url_for('users/urlfichares/index?usuarios_id='.$usuarios->getUsuariosId()) ?>">
+	      		<img title="Ver Fichas de Cereales de <?php echo $usuarios->getEnti()?>" alt="Ver Fichas de Cereales" src="/eternumweb/images/iconos/corn_yellow.png" >
+	      	</a>
+	      </td>
+	      <td style="width: 70px; text-align: center;"><?php echo $usuarios->getWebuser() ?></td>
+	      <td style="width: 70px; text-align: center;">*<?php // echo $usuarios->getWebpwd() ?></td>
+	    </tr>
+	    <?php $i++; endforeach; ?>
+	  </tbody>
+	</table>    
+    </td>
+  </tr>
+</table>
+<div style="padding: 5px; text-align: center; width: 99%; background-color: transparent; vertical-align: middle;">
+<?php if ($pager->getLastPage()>1):?>
+	<a class="btn_pager" style=" vertical-align: middle;" href="<?php echo url_for('users/index') ?>?pag=1"><img style=" vertical-align: middle;" alt="Primero" src="/eternumweb/images/resultset_first.png"></a>
+	<a class="btn_pager" style=" vertical-align: middle;" href="<?php echo url_for('users/index') ?>?pag=<?php echo $pager->getPreviousPage() ?>"><img style=" vertical-align: middle;" alt="Siguiente" src="/eternumweb/images/resultset_previous.png"></a>
+	<?php foreach ($pager->getLinks() as $page):?>
+		<?php if($pager->getPage() != $page): ?>
+			<a class="pager" href="<?php echo url_for('users/index') ?>?pag=<?php echo $page ?>"><?php echo $page ?></a>
+		<?php else: ?>
+			<em class="pager" style="font-weight: bold; font-style: normal; color: #ae8b10; border: 1px solid #ae8b10;"><?php echo $page ?></em>
+		<?php endif; ?>
+			
+	<?php endforeach; ?>
+	<a class="btn_pager" style=" vertical-align: middle;" href="<?php echo url_for('users/index') ?>?pag=<?php echo$pager->getNextPage() ?>"><img style=" vertical-align: middle;" alt="Anterior" src="/eternumweb/images/resultset_next.png"></a>
+	<a class="btn_pager" style=" vertical-align: middle;" href="<?php echo url_for('users/index') ?>?pag=<?php echo $pager->getLastPage() ?>"><img style=" vertical-align: middle;" alt="Ultimo" src="/eternumweb/images/resultset_last.png"></a>
+<?php endif;?>
+</div>
+
+</div>
+  
+
